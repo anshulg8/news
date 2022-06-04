@@ -17,6 +17,7 @@ const sources = [
 	{ sourceType: "business-line", sourceLabel: "Business Line", color: "#2F4254" },
 	{ sourceType: "bloomberg-quint", sourceLabel: "Bloomberg Quint", color: "#2F4254" },
 	{ sourceType: "et", sourceLabel: "ET", color: "#FEE9E2" },
+	{ sourceType: "pbi", sourceLabel: "PBI", color: "#FEE9E2" },
 	{ sourceType: "bhaskar-raj", sourceLabel: "Bhaskar Rajasthan", color: "#AC2122" },
 	{ sourceType: "bhaskar-delhi", sourceLabel: "Bhaskar NewDelhi", color: "#AC2122" },
 	{ sourceType: "dev-to", sourceLabel: "Dev Community", color: "#000000", darkModeColor: "#ffffff" },

@@ -179,6 +179,9 @@ const fetchWired = async ({ sourceLabel, sourceType }) =>
 const fetchMediumTechnology = async ({ sourceLabel, sourceType }) =>
 	await fetchFromRSS("https://medium.com/feed/tag/technology", sourceLabel, sourceType);
 
+const fetchPBI = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3", sourceLabel, sourceType);
+
 const supportedSources = [
 	{ sourceType: "hacker-news", sourceLabel: "Hacker News", fetcher: fetchHackerNews },
 	{ sourceType: "product-hunt", sourceLabel: "Product Hunt", fetcher: fetchProductHunt },
@@ -196,6 +199,7 @@ const supportedSources = [
 	{ sourceType: "et", sourceLabel: "ET", fetcher: fetchETHome },
 	{ sourceType: "bhaskar-raj", sourceLabel: "Bhaskar Rajasthan", fetcher: fetchBhaskarRajasthan },
 	{ sourceType: "bhaskar-delhi", sourceLabel: "Bhaskar NewDelhi", fetcher: fetchBhaskarNewDelhi },
+	{ sourceType: "pbi", sourceLabel: "PBI", fetcher: fetchPBI },
 	{ sourceType: "designer-news", sourceLabel: "Designer News", fetcher: fetchDesignerNews },
 	{ sourceType: "techcrunch", sourceLabel: "TechCrunch", fetcher: fetchTechCrunch },
 	{ sourceType: "dev-to", sourceLabel: "Dev Community", fetcher: fetchDevTo },
