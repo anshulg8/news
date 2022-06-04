@@ -137,6 +137,12 @@ const fetchTOITop = async ({ sourceLabel, sourceType }) =>
 const fetchTOIBusiness = async ({ sourceLabel, sourceType }) =>
 	await fetchFromRSS("https://timesofindia.indiatimes.com/rssfeeds/1898055.cms", sourceLabel, sourceType)
 
+const fetchHTWorld = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.hindustantimes.com/feeds/rss/world-news/rssfeed.xml", sourceLabel, sourceType)
+
+const fetchHTIndia = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml", sourceLabel, sourceType)
+
 const fetchMoneyControlBusiness = async ({ sourceLabel, sourceType }) =>
 	await fetchFromRSS("https://www.moneycontrol.com/rss/business.xml", sourceLabel, sourceType)
 
@@ -198,6 +204,8 @@ const supportedSources = [
 	{ sourceType: "toi-business", sourceLabel: "Times of India - Business", fetcher: fetchTOIBusiness },
 	{ sourceType: "ie-world", sourceLabel: "Indian Express - World", fetcher: fetchIEWorld },
 	{ sourceType: "ie-india", sourceLabel: "Indian Express - India", fetcher: fetchIEIndia },
+	{ sourceType: "ht-world", sourceLabel: "Hindustan Times - World", fetcher: fetchHTWorld },
+	{ sourceType: "ht-india", sourceLabel: "Hindustan Times - India", fetcher: fetchHTIndia },
 	{ sourceType: "mc-business", sourceLabel: "MoneyControl - Business", fetcher: fetchMoneyControlBusiness },
 	{ sourceType: "cnbc-business", sourceLabel: "CNBC - Business", fetcher: fetchCNBCBusiness },
 	{ sourceType: "fe", sourceLabel: "Financial Express", fetcher: fetchFinancialExpress },

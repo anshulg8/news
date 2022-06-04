@@ -12,6 +12,8 @@ const sources = [
 	{ sourceType: "toi-business", sourceLabel: "Times of India - Business", color: "#D01F25" },
 	{ sourceType: "ie-world", sourceLabel: "Indian Express - World", color: "#D01F25" },
 	{ sourceType: "ie-india", sourceLabel: "Indian Express - India", color: "#D01F25" },
+	{ sourceType: "ht-world", sourceLabel: "Hindustan Times - World", color: "#D01F25" },
+	{ sourceType: "ht-india", sourceLabel: "Hindustan Times - India", color: "#D01F25" },
 	{ sourceType: "mc-business", sourceLabel: "MoneyControl - Business", color: "#D01F25" },
 	{ sourceType: "cnbc-business", sourceLabel: "CNBC - Business", color: "#D01F25" },
 	{ sourceType: "fe", sourceLabel: "Financial Express", color: "#D01F25" },
