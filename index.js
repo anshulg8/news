@@ -116,6 +116,12 @@ const fetchDevTo = async ({ sourceLabel, sourceType }) => {
 const fetchDesignerNews = async ({ sourceLabel, sourceType }) =>
 	await fetchFromRSS("https://www.designernews.co/?format=rss", sourceLabel, sourceType);
 
+const fetchIEWorld = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://indianexpress.com/section/world/feed/", sourceLabel, sourceType);
+
+const fetchIEIndia = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://indianexpress.com/section/india/feed/", sourceLabel, sourceType);
+
 const fetchHinduNews = async ({ sourceLabel, sourceType }) =>
 	await fetchFromRSS("https://thehindu.com/business/feeder/default.rss", sourceLabel, sourceType)
 
@@ -183,13 +189,15 @@ const fetchPBI = async ({ sourceLabel, sourceType }) =>
 	await fetchFromRSS("https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3", sourceLabel, sourceType);
 
 const supportedSources = [
-	{ sourceType: "hacker-news", sourceLabel: "Hacker News", fetcher: fetchHackerNews },
-	{ sourceType: "product-hunt", sourceLabel: "Product Hunt", fetcher: fetchProductHunt },
+	// { sourceType: "hacker-news", sourceLabel: "Hacker News", fetcher: fetchHackerNews },
+	// { sourceType: "product-hunt", sourceLabel: "Product Hunt", fetcher: fetchProductHunt },
 	{ sourceType: "hindu", sourceLabel: "The Hindu", fetcher: fetchHinduNews },
 	{ sourceType: "hindu-business", sourceLabel: "The Hindu - Business", fetcher: fetchHinduBusinessNews },
 	{ sourceType: "india-today", sourceLabel: "India Today", fetcher: fetchIndiaToday },
 	{ sourceType: "toi", sourceLabel: "Times of India", fetcher: fetchTOITop },
 	{ sourceType: "toi-business", sourceLabel: "Times of India - Business", fetcher: fetchTOIBusiness },
+	{ sourceType: "ie-world", sourceLabel: "Indian Express - World", fetcher: fetchIEWorld },
+	{ sourceType: "ie-india", sourceLabel: "Indian Express - India", fetcher: fetchIEIndia },
 	{ sourceType: "mc-business", sourceLabel: "MoneyControl - Business", fetcher: fetchMoneyControlBusiness },
 	{ sourceType: "cnbc-business", sourceLabel: "CNBC - Business", fetcher: fetchCNBCBusiness },
 	{ sourceType: "fe", sourceLabel: "Financial Express", fetcher: fetchFinancialExpress },
@@ -199,16 +207,16 @@ const supportedSources = [
 	{ sourceType: "et", sourceLabel: "ET", fetcher: fetchETHome },
 	{ sourceType: "bhaskar-raj", sourceLabel: "Bhaskar Rajasthan", fetcher: fetchBhaskarRajasthan },
 	{ sourceType: "bhaskar-delhi", sourceLabel: "Bhaskar NewDelhi", fetcher: fetchBhaskarNewDelhi },
-	{ sourceType: "pbi", sourceLabel: "PBI", fetcher: fetchPBI },
-	{ sourceType: "designer-news", sourceLabel: "Designer News", fetcher: fetchDesignerNews },
-	{ sourceType: "techcrunch", sourceLabel: "TechCrunch", fetcher: fetchTechCrunch },
-	{ sourceType: "dev-to", sourceLabel: "Dev Community", fetcher: fetchDevTo },
-	{ sourceType: "the-next-web", sourceLabel: "The Next Web", fetcher: fetchTheNextWeb },
-	{ sourceType: "smashing-magazine", sourceLabel: "Smashing Magazine", fetcher: fetchSmashingMagazine },
-	{ sourceType: "engadget", sourceLabel: "Engadget", fetcher: fetchEngadget },
-	{ sourceType: "the-verge", sourceLabel: "The Verge", fetcher: fetchTheVerge },
-	{ sourceType: "wired", sourceLabel: "Wired", fetcher: fetchWired },
-	{ sourceType: "medium-technology", sourceLabel: "Medium", fetcher: fetchMediumTechnology },
+	{ sourceType: "pib", sourceLabel: "PBI", fetcher: fetchPBI },
+	// { sourceType: "designer-news", sourceLabel: "Designer News", fetcher: fetchDesignerNews },
+	// { sourceType: "techcrunch", sourceLabel: "TechCrunch", fetcher: fetchTechCrunch },
+	// { sourceType: "dev-to", sourceLabel: "Dev Community", fetcher: fetchDevTo },
+	// { sourceType: "the-next-web", sourceLabel: "The Next Web", fetcher: fetchTheNextWeb },
+	// { sourceType: "smashing-magazine", sourceLabel: "Smashing Magazine", fetcher: fetchSmashingMagazine },
+	// { sourceType: "engadget", sourceLabel: "Engadget", fetcher: fetchEngadget },
+	// { sourceType: "the-verge", sourceLabel: "The Verge", fetcher: fetchTheVerge },
+	// { sourceType: "wired", sourceLabel: "Wired", fetcher: fetchWired },
+	// { sourceType: "medium-technology", sourceLabel: "Medium", fetcher: fetchMediumTechnology },
 ];
 
 // const fetchTemplate = async ({ sourceLabel, sourceType }) => {
