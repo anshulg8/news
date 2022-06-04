@@ -116,6 +116,48 @@ const fetchDevTo = async ({ sourceLabel, sourceType }) => {
 const fetchDesignerNews = async ({ sourceLabel, sourceType }) =>
 	await fetchFromRSS("https://www.designernews.co/?format=rss", sourceLabel, sourceType);
 
+const fetchHinduNews = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://thehindu.com/business/feeder/default.rss", sourceLabel, sourceType)
+
+const fetchHinduBusinessNews = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.thehindu.com/business/feeder/default.rss", sourceLabel, sourceType)
+
+const fetchIndiaToday = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.indiatoday.in/rss/home", sourceLabel, sourceType)
+
+const fetchTOITop = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://timesofindia.indiatimes.com/rssfeedstopstories.cms", sourceLabel, sourceType)
+
+const fetchTOIBusiness = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://timesofindia.indiatimes.com/rssfeeds/1898055.cms", sourceLabel, sourceType)
+
+const fetchMoneyControlBusiness = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.moneycontrol.com/rss/business.xml", sourceLabel, sourceType)
+
+const fetchCNBCBusiness = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664", sourceLabel, sourceType)
+
+const fetchFinancialExpress = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.financialexpress.com/feed/", sourceLabel, sourceType)
+
+const fetchZeeBusiness = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.zeebiz.com/latest.xml/feed", sourceLabel, sourceType)
+
+const fetchBusinessLine = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.thehindubusinessline.com/?service=rss", sourceLabel, sourceType)
+
+const fetchBloombergQuint = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://prod-qt-images.s3.amazonaws.com/production/bloombergquint/feed.xml", sourceLabel, sourceType)
+
+const fetchETHome = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://economictimes.indiatimes.com/rssfeedsdefault.cms", sourceLabel, sourceType)
+
+const fetchBhaskarRajasthan = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.bhaskar.com/rss-v1--category-1740.xml", sourceLabel, sourceType)
+
+const fetchBhaskarNewDelhi = async ({ sourceLabel, sourceType }) =>
+	await fetchFromRSS("https://www.bhaskar.com/rss-v1--category-7140.xml", sourceLabel, sourceType)
+
 const fetchTechCrunch = async ({ sourceLabel, sourceType }) =>
 	await fetchFromRSS("https://techcrunch.com/feed/", sourceLabel, sourceType);
 
@@ -140,6 +182,20 @@ const fetchMediumTechnology = async ({ sourceLabel, sourceType }) =>
 const supportedSources = [
 	{ sourceType: "hacker-news", sourceLabel: "Hacker News", fetcher: fetchHackerNews },
 	{ sourceType: "product-hunt", sourceLabel: "Product Hunt", fetcher: fetchProductHunt },
+	{ sourceType: "hindu", sourceLabel: "The Hindu", fetcher: fetchHinduNews },
+	{ sourceType: "hindu-business", sourceLabel: "The Hindu - Business", fetcher: fetchHinduBusinessNews },
+	{ sourceType: "india-today", sourceLabel: "India Today", fetcher: fetchIndiaToday },
+	{ sourceType: "toi", sourceLabel: "Times of India", fetcher: fetchTOITop },
+	{ sourceType: "toi-business", sourceLabel: "Times of India - Business", fetcher: fetchTOIBusiness },
+	{ sourceType: "mc-business", sourceLabel: "MoneyControl - Business", fetcher: fetchMoneyControlBusiness },
+	{ sourceType: "cnbc-business", sourceLabel: "CNBC - Business", fetcher: fetchCNBCBusiness },
+	{ sourceType: "fe", sourceLabel: "Financial Express", fetcher: fetchFinancialExpress },
+	{ sourceType: "zee-business", sourceLabel: "Zee Business", fetcher: fetchZeeBusiness },
+	{ sourceType: "business-line", sourceLabel: "Business Line", fetcher: fetchBusinessLine },
+	{ sourceType: "bloomberg-quint", sourceLabel: "Bloomberg Quint", fetcher: fetchBloombergQuint },
+	{ sourceType: "et", sourceLabel: "ET", fetcher: fetchETHome },
+	{ sourceType: "bhaskar-raj", sourceLabel: "Bhaskar Rajasthan", fetcher: fetchBhaskarRajasthan },
+	{ sourceType: "bhaskar-delhi", sourceLabel: "Bhaskar NewDelhi", fetcher: fetchBhaskarNewDelhi },
 	{ sourceType: "designer-news", sourceLabel: "Designer News", fetcher: fetchDesignerNews },
 	{ sourceType: "techcrunch", sourceLabel: "TechCrunch", fetcher: fetchTechCrunch },
 	{ sourceType: "dev-to", sourceLabel: "Dev Community", fetcher: fetchDevTo },
